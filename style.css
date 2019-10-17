@@ -1,0 +1,21 @@
+body{
+    background-image: linear-gradient(#0000a5, #001123) !important;
+}
+.jumbotron {
+   background-color: transparent;
+   color: #fff
+}
+.div-center button{
+    background-color: #01133f;
+    border: 2px solid #fff;
+    margin-bottom: 30px;
+}
+.form-group label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff
+}
+
+.div-center{
+    margin: auto;
+}
