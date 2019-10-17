@@ -50,7 +50,7 @@ $(document).ready(() => {
         console.log(typeof(dataStorage))
         dataStorage.push(data);
         
-        // localStorage.setItem('data',JSON.stringify(dataStorage));
+        localStorage.setItem('data',JSON.stringify(dataStorage));
 
         showModal(data);
 
