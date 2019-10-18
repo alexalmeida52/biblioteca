@@ -89,7 +89,6 @@ $(document).ready(() => {
           </tr>`;
             $('#livros').append(linha);
             showModal(data);
-            clearFilds();
         } else {
             alert('Preencha todos os campos');
         }
@@ -115,13 +114,6 @@ $(document).ready(() => {
         window.reload();
     });
 
-    // Clear fields
-    function clearFilds() {
-        $('#title').val() = '';
-        $('#author').val() = '';
-        $('#pages').val() = '';
-        $('#status').val() = '';
-    }
     function verify() {
         if ($('#title').val() == ''){
              return false};
