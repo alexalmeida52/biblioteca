@@ -68,7 +68,7 @@ $(document).ready(() => {
     // Evento do clique para salvar o formulário do livro
     $('#submit').click(() => {
         if (verify()) {
-            
+
             const data = getFilds();
             console.log('Salvando ' + data.title);
             console.log(JSON.parse(localStorage.getItem('data')));
@@ -98,10 +98,16 @@ $(document).ready(() => {
     // Evento para apagar um livro
     $('.fa-trash').click((e) => {
         console.log("Apagando livro " + e.target.id);
+        let title = $(`#${e.target.id} td`).html();
         $(`#${e.target.id}`).remove();
-        const id = e.target.id;
+
+        // console.log(teste.html());
+    
         let bookList = JSON.parse(localStorage.getItem('data'));
-        bookList = bookList.filter((elm, i) => { return i != id }).map(elm => {
+        bookList = bookList.filter((elm) => { 
+            console.log(elm.title + ' != ' + title );
+            return elm.title != title 
+        }).map(elm => {
             return elm;
         });
         // console.log(bookList);
@@ -115,14 +121,18 @@ $(document).ready(() => {
     });
 
     function verify() {
-        if ($('#title').val() == ''){
-             return false};
-        if ($('#author').val() == ''){
-             return false};
-        if ($('#pages').val() == ''){
-             return false};
-        if ($('#status').val() == ''){
-             return false};
+        if ($('#title').val() == '') {
+            return false
+        };
+        if ($('#author').val() == '') {
+            return false
+        };
+        if ($('#pages').val() == '') {
+            return false
+        };
+        if ($('#status').val() == '') {
+            return false
+        };
         return true;
     }
 
