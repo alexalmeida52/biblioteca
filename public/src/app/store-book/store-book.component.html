@@ -1,0 +1,78 @@
+<div id="secao-01" class="wrap secao">
+  <div style="padding-bottom: 0;" class="jumbotron text-center">
+    <h1>THE BOOK LIBRARY</h1>
+    <p>Find here the best books of international literature!</p>
+  </div>
+
+  <div class="container" id="container">
+    <div class="row">
+      <div id="formulario" class="col-md-6 div-center">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input [(ngModel)]="data.title" type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+          <label for="author">Author:</label>
+          <input [(ngModel)]="data.author" type="text" class="form-control" id="author">
+        </div>
+        <div class="form-group">
+          <label for="pages">Pages:</label>
+          <input [(ngModel)]="data.pages" type="text" class="form-control" id="pages">
+        </div>
+        <div class="form-group">
+          <label for="sel1">Status:</label>
+          <select [(ngModel)]="data.status" id="status" class="form-control" id="sel1">
+            <option value="Read">Read</option>
+            <option value="Not Read">Not Read</option>
+          </select>
+        </div>
+        <button style="margin-bottom: 0;" id="submit" class="btn btn-primary col-md-12" data-toggle="modal"
+          data-target="#myModal" (click)="submit()">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-12">
+                      <button class="col-md-12 btn-primary" ><i class="fa fa-chevron-down"></i></button>
+                  </div> -->
+  <span class="icone-scroll">
+    <span class="scroll-next scroll"></span>
+  </span>
+</div>
+<div id="secao-02" class="wrap secao">
+
+  <div style="padding-bottom: 0;" class="jumbotron text-center">
+    <h1>Book List</h1>
+    <p>View your list of books and their status</p>
+  </div>
+
+  <div class="container" style="height: 65%; overflow: auto;">
+    <input class="form-control col-md-2" id="inputFilter" type="text" placeholder="Search..">
+    <table class="table" style="background-color: #fff; border-radius: 5px;">
+      <thead class="thead-dark">
+        <tr>
+          <th class="text-center" scope="col">#</th>
+          <th class="text-center" scope="col">Title</th>
+          <th class="text-center" scope="col">Author</th>
+          <th class="text-center" scope="col">Pages</th>
+          <th class="text-center" scope="col">Status</th>
+          <th class="text-center" scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="livros">
+        <tr  *ngFor="let book of books" >
+          <th class="text-center" scope="row"></th>
+          <td class="text-center">{{book.title}}</td>
+          <td class="text-center">{{book.author}}</td>
+          <td class="text-center">{{book.pages}}</td>
+          <td class="text-center">{{book.status}}</td>
+          <td class="text-center"><i (click)="delete(book._id)" class="fa fa-trash" style="cursor: pointer" aria-hidden="true"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="icone-scroll">
+    <span class="scroll-top scroll"></span>
+    <span class="scroll-top scroll"></span>
+  </span>
+</div>

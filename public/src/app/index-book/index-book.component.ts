@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index-book.component.css']
 })
 export class IndexBookComponent implements OnInit {
-
+  books: any = [];
+  data: any = {};
   constructor() { }
 
   ngOnInit() {
+    this.books = JSON.parse(localStorage.getItem('data'));
   }
+
+  
 
 }

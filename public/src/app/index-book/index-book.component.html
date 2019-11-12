@@ -19,7 +19,14 @@
         </tr>
       </thead>
       <tbody id="livros">
-
+        <tr  *ngFor="let book of books" >
+          <th class="text-center" scope="row"></th>
+          <td class="text-center">{{book.title}}</td>
+          <td class="text-center">{{book.author}}</td>
+          <td class="text-center">{{book.pages}}</td>
+          <td class="text-center">{{book.status}}</td>
+          <td class="text-center"><i class="fa fa-trash" style="cursor: pointer" aria-hidden="true"></i></td>
+        </tr>
       </tbody>
     </table>
   </div>
