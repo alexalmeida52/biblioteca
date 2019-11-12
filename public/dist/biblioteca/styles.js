@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/alex/Documentos/UFRN/DESENVOLVIMENTO/Lib 2.0/biblioteca/public/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/alex/Documentos/UFRN/WEB/biblioteca/public/src/styles.css */"./src/styles.css");
 
 
 /***/ })
