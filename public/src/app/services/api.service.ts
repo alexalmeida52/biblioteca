@@ -5,7 +5,7 @@ import axios from 'axios';
 })
 export class ApiService {
   url: any = {
-    api: 'http://localhost:8080'
+    api: 'http://bibliotecaweb.herokuapp.com'
   }
   constructor() { }
 

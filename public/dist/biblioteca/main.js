@@ -206,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 var ApiService = /** @class */ (function () {
     function ApiService() {
         this.url = {
-            api: 'http://localhost:8080'
+            api: 'http://bibliotecaweb.herokuapp.com'
         };
     }
     ApiService.prototype.store = function (data) {
